@@ -1,0 +1,37 @@
+.tabs{
+  overflow: hidden;
+}
+
+.tabs .controls{
+  display:flex;
+}
+
+.tabs .controls button{
+  flex:1;
+  color:#f7ae48;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #fff;
+  border-left: none;
+  border-right: none;
+}
+
+.tabs .controls button:active{
+  border-bottom: 4px solid #f7ae48;
+}
+
+
+.tabs .tabs-container{
+  display:flex;
+  flex-wrap: nowrap; /* hace que el tab no se vaya abajo por ocupar toda la pantalla.
+                        Los tab siguen uno al lado del otro aun ocupando toda la pantalla*/
+  transform: translateX(0);
+  transition: all 0.2s ease-in;
+}
+
+.tabs .tabs-container .tab{
+  width:100%;
+  background-color: #cbd1cc;
+  flex-shrink: 0; /*hace que se respete el width:100% y cada tab ocupe el 100%
+                   de la pantalla*/
+}
